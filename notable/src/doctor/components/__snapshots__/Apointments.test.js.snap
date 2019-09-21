@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit tests for Apointments component Renders with snapshot 1`] = `
+<Table
+  bordered={false}
+  childrenColumnName="children"
+  className=""
+  columns={
+    Array [
+      Object {
+        "dataIndex": "name",
+        "key": "name",
+        "title": "Name",
+      },
+      Object {
+        "dataIndex": "time",
+        "key": "time",
+        "title": "Time",
+      },
+      Object {
+        "dataIndex": "kind",
+        "key": "kind",
+        "title": "Kind",
+      },
+    ]
+  }
+  dataSource={Array []}
+  indentSize={20}
+  loading={false}
+  locale={Object {}}
+  rowKey="key"
+  showHeader={true}
+  size="default"
+  sortDirections={
+    Array [
+      "ascend",
+      "descend",
+    ]
+  }
+  useFixedHeader={false}
+/>
+`;

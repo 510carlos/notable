@@ -1,44 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Redirect } from 'react-router';
-import { getDoctors } from '../Doctors.helpers';
-
 import { Button, Menu, Icon } from 'antd';
+import { useDoctorContext } from '../Doctor.context';
+import { StoreDocID } from '../Doctors.hooks';
+
 const { SubMenu } = Menu;
 
 const DoctorList = () => {
-    const [docId, setId] = useState(-1);
-    const [doctorsList, setDoctors] = useState([]);
-    useEffect(() => {
-        let mounted = true;
-
-        if (mounted) setId(-1)
-
-        getDoctors().then( ({data}) => {
-            if(mounted) {
-                setDoctors(data)
-            }
-        });
-        return () => {
-            mounted = false;
-        };
-    }, [docId]);
+    const [docId, setId] = StoreDocID();
+    const doctorsList = useDoctorContext();
 
     const handleClick = e => {
-        setId(e.key)
+        const id = e.key;
+        if(id)
+            setId(id)
     }
 
-    if (docId !== -1) {
-        console.log("do not show")
+    if (docId !== -1)
         return <Redirect to={`/doctor/${docId}`} />
-    }
-
 
     const items = [];
-    if(doctorsList && doctorsList.length !== 0) {
-        doctorsList.map((doc, id) => {
+    if(doctorsList && doctorsList.length !== 0)
+        doctorsList.map((doc, id) =>
             items.push(<Menu.Item key={id}>{doc.name}</Menu.Item>)
-        })
-    }
+        )
 
     return (
         <Menu
@@ -59,7 +44,7 @@ const DoctorList = () => {
             >
             {items}
             </SubMenu>
-            <Button block type="primary">Logout</Button>
+            <Button block={true} type="primary">Logout</Button>
         </Menu>
     )
 };

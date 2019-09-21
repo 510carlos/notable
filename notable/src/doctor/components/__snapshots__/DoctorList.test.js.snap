@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit tests for DoctorList Renders with snapshot 1`] = `
+<Menu
+  defaultOpenKeys={
+    Array [
+      "sub1",
+    ]
+  }
+  defaultSelectedKeys={
+    Array [
+      "1",
+    ]
+  }
+  mode="inline"
+  onClick={[Function]}
+  style={
+    Object {
+      "borderRight": 0,
+      "height": "100%",
+    }
+  }
+>
+  <SubMenu
+    key="sub1"
+    title={
+      <span>
+        <Icon
+          type="user"
+        />
+        Physicians
+      </span>
+    }
+  >
+    <MenuItem
+      key="0"
+    >
+      Hibbert, Julius
+    </MenuItem>
+    <MenuItem
+      key="1"
+    >
+      Krieger, Algemap
+    </MenuItem>
+    <MenuItem
+      key="2"
+    >
+      Riviera, Nick
+    </MenuItem>
+  </SubMenu>
+  <Button
+    block={true}
+    ghost={false}
+    htmlType="button"
+    loading={false}
+    type="primary"
+  >
+    Logout
+  </Button>
+</Menu>
+`;

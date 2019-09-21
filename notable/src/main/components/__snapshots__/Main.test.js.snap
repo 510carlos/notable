@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit tests for Information Renders with snapshot 1`] = `
+<ContextProvider
+  value={Array []}
+>
+  <Adapter>
+    <Sider
+      style={
+        Object {
+          "background": "#fff",
+        }
+      }
+      width={200}
+    >
+      <DoctorList />
+    </Sider>
+    <Adapter
+      style={
+        Object {
+          "padding": "0 24px 24px",
+        }
+      }
+    >
+      <Adapter
+        style={
+          Object {
+            "background": "#fff",
+            "margin": 0,
+            "minHeight": 280,
+            "padding": 24,
+          }
+        }
+      >
+        <withRouter(DoctorsRoutes) />
+      </Adapter>
+    </Adapter>
+  </Adapter>
+</ContextProvider>
+`;

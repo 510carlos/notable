@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit tests for Information Renders with snapshot 1`] = `
+<Fragment>
+  <h1>
+    Krieger, Algemap
+  </h1>
+  <h3>
+    kriger@notablehealth.com
+  </h3>
+</Fragment>
+`;
